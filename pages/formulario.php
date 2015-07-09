@@ -36,10 +36,12 @@
             
         </div>   
         <div class="main" id="consultar" style="display: none;">
-            <h3>Consultar mi cuenta</h3>
-            <form action="index.php" method="POST">
-            <input type="hidden" name="tipo" id="tipo" value="2"/>    
-             <button>Consultar</button>
+            <h3>Consultar mi cuenta desde una fecha</h3>
+            <form action="index.php" method="POST" name='consultar' id='consultar'>
+            <input type="hidden" name="tipo" id="tipo" value="2"/>  
+            <input type="date" name="fechaInicio" placeholder="Movimientos desde ... "/>
+            <input type="date" name="fechaFin" placeholder="Movimientos hasta ... "/>
+            <input type="button" id="consultar" value="Consultar mi saldo"/>
             </form>
         </div> 
         <script src="cajero.js"></script>
