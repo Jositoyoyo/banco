@@ -12,3 +12,6 @@ input {
     font-style: italic;
     margin: 2px 0;
 }
+.mov {
+    background: #ccc 1px solid;
+}
