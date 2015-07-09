@@ -1,0 +1,14 @@
+.main {
+    width: 80%; margin: 0 auto;
+}
+input {
+    margin: 2px 0;
+}
+.success {
+    border-color: appworkspace;
+    border: 1px solid;
+    padding: 10px;
+    font-size: 14px;
+    font-style: italic;
+    margin: 2px 0;
+}

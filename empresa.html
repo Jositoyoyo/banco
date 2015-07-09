@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario de ingresos y transferencias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Formulario de ingresos y transferencias</h2>
+        <div style="width: 80%; margin: 0 auto;">
+        <form action="entidadBanco.php" method="POST">
+            <input type="hidden" name="opcion" value="ingresar"/>
+            <input type="text" name="userId" value="" placeholder="Numero de usuario"/>
+            <input type="text" id="hora" name="hora" value="" readonly style="width: 100px;"/>
+            <input type="text" id="fecha" name="fecha" value="" readonly style="width: 100px;"/>
+            <input type="text" name="emisor" value="" placeholder="Nombre entidad emisora"/>    
+            <input type="text" name="concepto" value="" placeholder="Concepto" style="width: 100%;"/>
+            <select name="tipo" id="tipo">
+                <option value="0">Ingreso</option>
+                <option value="3">Recibo</option>
+            </select>
+            <input type="text" id="importe" name="importe" value="00.00" placeholder="Indicar cantidad" />
+            <textarea name="detalles" placeholder="Detalles de la operacion" style="width: 100%; height: 250px;"></textarea>
+            <button>Ingresar</button>
+        </form>
+        </div>
+        <script>
+            function setHoraDia(){
+                var hora = new Date();
+                var setHora = document.getElementById("hora");
+                var setDia = document.getElementById("fecha");
+                setHora.value = hora.getHours()+':'+hora.getMinutes()+':'+hora.getSeconds();
+                setDia.value = hora.getFullYear()+'-'+hora.getMonth()+'-'+hora.getDay();
+            }
+            function init(){
+                setHoraDia();
+            }
+            window.addEventListener('load', init());
+        </script>
+    </body>
+</html>

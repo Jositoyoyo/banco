@@ -39,10 +39,11 @@
             <h3>Consultar mi cuenta desde una fecha</h3>
             <form action="index.php" method="POST" name='consultar' id='consultar'>
             <input type="hidden" name="tipo" id="tipo" value="2"/>  
-            <input type="date" name="fechaInicio" placeholder="Movimientos desde ... "/>
-            <input type="date" name="fechaFin" placeholder="Movimientos hasta ... "/>
-            <input type="button" id="consultar" value="Consultar mi saldo"/>
+            <input type="date" id="fechaInicio" name="fechaInicio" placeholder="Movimientos desde ... "/>
+            <input type="date" id="fechaFinal" name="fechaFinal" placeholder="Movimientos hasta ... "/>
+            <input type="button" id="consultar" name="consultar" value="Consultar mi saldo"/>
             </form>
+            <div id="mostrarMovimientos"></div>
         </div> 
         <script src="cajero.js"></script>
     </body>
