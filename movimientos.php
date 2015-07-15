@@ -27,7 +27,7 @@ class movimientos {
         
     }
     function conectarBaseDatos(){
-        return(new mysqli('localhost', 'root', 'jositoyoyo', 'banco'));
+        return(new mysqli('localhost', '', '', 'banco'));
     }
     function mostrarMovimientos() {
         $fechaInicio = $_POST['fechaInicio'];
